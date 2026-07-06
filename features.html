@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore every Routinee feature: habits, tasks, budgets, savings, couple planning, and special days." />
     <title>Routinee — Features</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,60 +11,129 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="scroll-progress"></div>
+
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="index.html"><span class="brand-mark">R</span><span>Routinee</span></a>
-        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
         <nav class="nav-links">
           <a href="index.html">Home</a>
           <a href="features.html">Features</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
+          <a href="help.html">Help</a>
+          <a href="faq.html">FAQ</a>
           <a href="contact.html">Contact</a>
         </nav>
+        <div class="nav-cta">
+          <a class="btn btn-primary" href="contact.html">Get the app</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
       </div>
     </header>
 
     <main class="page-shell">
       <section class="page-hero">
+        <span class="hero-orb o1"></span>
+        <span class="hero-orb o2"></span>
+        <div class="dot-grid"></div>
         <div class="container">
           <div class="hero-copy reveal">
             <span class="eyebrow">Feature overview</span>
-            <h1>Everything you need to lead a more intentional life.</h1>
-            <p>Routinee brings finance and productivity together with a premium experience that feels calm, visual, and deeply useful.</p>
+            <h1>Everything you need to lead a more <span class="gradient-text">intentional life.</span></h1>
+            <p class="lede">Routinee brings finance and productivity together with a premium experience that feels calm, visual, and deeply useful — six life areas, one refined app.</p>
           </div>
-          <div class="page-panel reveal">
-            <div class="grid grid-3">
-              <article class="card">
-                <div class="icon-bubble">◈</div>
-                <h3>Expense tracking</h3>
-                <p>Capture spending instantly and understand where your money goes.</p>
-              </article>
-              <article class="card">
-                <div class="icon-bubble">⟡</div>
-                <h3>Habit rituals</h3>
-                <p>Build consistent routines with streaks, reminders, and rewarding progress.</p>
-              </article>
-              <article class="card">
-                <div class="icon-bubble">☰</div>
-                <h3>Task systems</h3>
-                <p>Make daily priorities clear without overwhelm or friction.</p>
-              </article>
-              <article class="card">
-                <div class="icon-bubble">◌</div>
-                <h3>Budget management</h3>
-                <p>Stay aware of monthly limits and create healthier financial habits.</p>
-              </article>
-              <article class="card">
-                <div class="icon-bubble">♡</div>
-                <h3>Couple collaboration</h3>
-                <p>Share plans, reminders, and budgets with your partner in one secure space.</p>
-              </article>
-              <article class="card">
-                <div class="icon-bubble">⬢</div>
-                <h3>Savings milestones</h3>
-                <p>Transform goals into motivating progress with clear visual targets.</p>
-              </article>
+        </div>
+      </section>
+
+      <section class="section section-tight">
+        <div class="container">
+          <div class="section-head reveal">
+            <div><span class="eyebrow">Productivity</span><h2 style="margin-top:0.9rem;">Habits and tasks that build real momentum.</h2></div>
+          </div>
+          <div class="grid grid-3">
+            <article class="card reveal">
+              <div class="icon-bubble">⟡</div>
+              <h3>Habit rituals</h3>
+              <p>Build consistent routines with streaks, reminders, and rewarding progress that keep you coming back.</p>
+              <div class="tag-row"><span class="tag">Streak tracking</span><span class="tag">Daily reflections</span></div>
+            </article>
+            <article class="card reveal" style="--delay:80ms">
+              <div class="icon-bubble">☰</div>
+              <h3>Task systems</h3>
+              <p>Make daily priorities clear without overwhelm. Sort by focus, due date, or energy level.</p>
+              <div class="tag-row"><span class="tag">Priorities</span><span class="tag">Focus mode</span></div>
+            </article>
+            <article class="card reveal" style="--delay:160ms">
+              <div class="icon-bubble">◫</div>
+              <h3>Weekly reviews</h3>
+              <p>A calm, guided reflection each week to see what worked and reset intentions for the next.</p>
+              <div class="tag-row"><span class="tag">Insights</span><span class="tag">Reset ritual</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tight">
+        <div class="container">
+          <div class="section-head reveal">
+            <div><span class="eyebrow">Finance</span><h2 style="margin-top:0.9rem;">Money that finally feels understandable.</h2></div>
+          </div>
+          <div class="grid grid-3">
+            <article class="card reveal">
+              <div class="icon-bubble">◈</div>
+              <h3>Expense tracking</h3>
+              <p>Capture spending instantly and understand where your money goes with smart categorization.</p>
+              <div class="tag-row"><span class="tag">Auto-categorize</span><span class="tag">Trends</span></div>
+            </article>
+            <article class="card reveal" style="--delay:80ms">
+              <div class="icon-bubble">◌</div>
+              <h3>Budget management</h3>
+              <p>Stay aware of monthly limits and create healthier financial habits with gentle nudges, not guilt.</p>
+              <div class="tag-row"><span class="tag">Monthly limits</span><span class="tag">Alerts</span></div>
+            </article>
+            <article class="card reveal" style="--delay:160ms">
+              <div class="icon-bubble">⬢</div>
+              <h3>Savings milestones</h3>
+              <p>Transform goals into motivating progress with clear visual targets for trips, gifts, and emergencies.</p>
+              <div class="tag-row"><span class="tag">Goal tracking</span><span class="tag">Visual progress</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tight">
+        <div class="container">
+          <div class="section-head reveal">
+            <div><span class="eyebrow">Together</span><h2 style="margin-top:0.9rem;">Built for shared life, not just solo tracking.</h2></div>
+          </div>
+          <div class="bento">
+            <article class="card span-6 reveal">
+              <div class="icon-bubble">♡</div>
+              <h3>Couple collaboration</h3>
+              <p>Share plans, reminders, and budgets with your partner in one secure space. Every shared item stays private between the two of you.</p>
+              <div class="tag-row"><span class="tag">Shared budgets</span><span class="tag">Joint reminders</span><span class="tag">Private by default</span></div>
+            </article>
+            <article class="card span-6 reveal" style="--delay:80ms">
+              <div class="icon-bubble">✦</div>
+              <h3>Special days</h3>
+              <p>Never miss an anniversary, birthday, or milestone again. Thoughtful reminders arrive early enough to actually plan something.</p>
+              <div class="tag-row"><span class="tag">Smart reminders</span><span class="tag">Gift planning</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta-banner reveal">
+            <span class="eyebrow">See it for yourself</span>
+            <h2 style="margin-top:0.9rem;">Every detail feels premium, polished, and intentional.</h2>
+            <p>Download Routinee and bring habits, finance, and shared plans into one calm experience.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="contact.html">
+                <span class="play-badge" aria-hidden="true"><span class="play-icon">▶</span></span>
+                <span>Get it on Google Play</span>
+              </a>
+              <a class="btn btn-secondary" href="help.html">Visit Help Center</a>
             </div>
           </div>
         </div>
@@ -71,9 +141,34 @@
     </main>
 
     <footer class="footer">
-      <div class="container footer-row">
-        <div>© 2025 Routinee. All rights reserved.</div>
-        <div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Support</a></div>
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="brand" href="index.html"><span class="brand-mark">R</span><span>Routinee</span></a>
+            <p>A premium personal operating system for habits, tasks, budgets, savings, and shared plans.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="features.html">Features</a>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Get the app</a>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <a href="help.html">Help Center</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact us</a>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>© 2026 Routinee. All rights reserved.</div>
+          <div class="footer-social"><a href="mailto:routineeapp@gmail.com" aria-label="Email">✉</a></div>
+        </div>
       </div>
     </footer>
 
