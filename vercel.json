@@ -1,5 +1,12 @@
 {
   "rewrites": [
-    { "source": "/reset-password", "destination": "/reset-password.html" }
+    { "source": "/reset-password", "destination": "/reset-password.html" },
+    { "source": "/invite",         "destination": "/invite.html" }
+  ],
+  "headers": [
+    {
+      "source": "/.well-known/assetlinks.json",
+      "headers": [{ "key": "Content-Type", "value": "application/json" }]
+    }
   ]
 }
