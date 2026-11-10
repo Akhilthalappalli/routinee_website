@@ -2,9 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Explore every Routinee feature: habits, tasks, budgets, savings, couple planning, and special days." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Every Routinee feature: expense tracking, budgets, savings, habit streaks, to-dos, Couple Space, Relationship Map, widgets, Back Tap and financial reports." />
+    <meta name="theme-color" content="#1b7f7e" />
     <title>Routinee — Features</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
@@ -15,7 +18,7 @@
 
     <header class="site-header">
       <div class="container nav">
-        <a class="brand" href="index.html"><span class="brand-mark">R</span><span>Routinee</span></a>
+        <a class="brand" href="index.html"><span class="brand-mark"><img src="logo.png" alt="Routinee logo" width="40" height="40" /></span><span>Routinee</span></a>
         <nav class="nav-links">
           <a href="index.html">Home</a>
           <a href="features.html">Features</a>
@@ -23,117 +26,237 @@
           <a href="faq.html">FAQ</a>
           <a href="contact.html">Contact</a>
         </nav>
-        <div class="nav-cta">
-          <a class="btn btn-primary" href="contact.html">Get the app</a>
-        </div>
         <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
       </div>
     </header>
 
     <main class="page-shell">
       <section class="page-hero">
+        <div class="hero-bg"></div>
         <span class="hero-orb o1"></span>
         <span class="hero-orb o2"></span>
         <div class="dot-grid"></div>
         <div class="container">
           <div class="hero-copy reveal">
             <span class="eyebrow">Feature overview</span>
-            <h1>Everything you need to lead a more <span class="gradient-text">intentional life.</span></h1>
-            <p class="lede">Routinee brings finance and productivity together with a premium experience that feels calm, visual, and deeply useful — six life areas, one refined app.</p>
+            <h1>Everything Routinee can do <span class="gradient-text">for you — and for two.</span></h1>
+            <p class="lede">Six areas, one app: personal finance, habits &amp; productivity, Couple Space, the Relationship Map, smart shortcuts and financial reports.</p>
+            <div class="legal-toc" style="margin-top:1.6rem; margin-bottom:0">
+              <a href="#finance">💸 Finance &amp; Budgeting</a>
+              <a href="#habits">🔥 Habits &amp; Productivity</a>
+              <a href="#couple">❤️ Couple Space</a>
+              <a href="#map">🗺️ Relationship Map</a>
+              <a href="#smart">⚡ Smart Features</a>
+              <a href="#reports">📊 Reports &amp; Insights</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section section-tight">
+      <!-- 1. Finance -->
+      <section class="section section-tight" id="finance">
         <div class="container">
           <div class="section-head reveal">
-            <div><span class="eyebrow">Productivity</span><h2 style="margin-top:0.9rem;">Habits and tasks that build real momentum.</h2></div>
+            <div><span class="eyebrow">1 · Personal Finance &amp; Budgeting</span><h2>Money that finally makes sense.</h2></div>
+            <p class="lede">From the first expense to the end-of-month report, Routinee keeps you in control without feeling like homework.</p>
           </div>
           <div class="grid grid-3">
             <article class="card reveal">
-              <div class="icon-bubble">⟡</div>
-              <h3>Habit rituals</h3>
-              <p>Build consistent routines with streaks, reminders, and rewarding progress that keep you coming back.</p>
-              <div class="tag-row"><span class="tag">Streak tracking</span><span class="tag">Daily reflections</span></div>
+              <div class="icon-bubble">🧾</div>
+              <h3>Track everything</h3>
+              <ul class="check-list"><li>Expense tracking</li><li>Income tracking</li><li>Personal expense tracking</li><li>Transaction history</li></ul>
             </article>
             <article class="card reveal" style="--delay:80ms">
-              <div class="icon-bubble">☰</div>
-              <h3>Task systems</h3>
-              <p>Make daily priorities clear without overwhelm. Sort by focus, due date, or energy level.</p>
-              <div class="tag-row"><span class="tag">Priorities</span><span class="tag">Focus mode</span></div>
+              <div class="icon-bubble is-coral">🎯</div>
+              <h3>Plan your month</h3>
+              <ul class="check-list is-coral"><li>Monthly budget planner</li><li>Category-wise budgets</li><li>Daily spending allowance</li><li>Custom billing cycle</li></ul>
             </article>
             <article class="card reveal" style="--delay:160ms">
-              <div class="icon-bubble">◫</div>
-              <h3>Weekly reviews</h3>
-              <p>A calm, guided reflection each week to see what worked and reset intentions for the next.</p>
-              <div class="tag-row"><span class="tag">Insights</span><span class="tag">Reset ritual</span></div>
+              <div class="icon-bubble is-peach">🌱</div>
+              <h3>Grow your savings</h3>
+              <ul class="check-list"><li>Savings tracker</li><li>Financial goals</li><li>Budget health monitoring</li><li>Shared expense manager</li></ul>
+            </article>
+            <article class="card is-tint span-12 reveal" style="grid-column: 1 / -1">
+              <div class="feature-split">
+                <div>
+                  <div class="icon-bubble is-solid-teal">💡</div>
+                  <h3>Reports, analytics &amp; spending insights</h3>
+                  <p>See where your money goes by category, how this month compares to the last, and whether your budget is healthy — all in clear, friendly visuals.</p>
+                  <div class="tag-row"><span class="tag">Expense reports &amp; analytics</span><span class="tag">Spending insights</span><span class="tag">Budget health</span></div>
+                </div>
+                <div class="ui-card">
+                  <div class="k">This month vs last</div>
+                  <div class="bars" aria-hidden="true"><i style="height:50%"></i><i class="hi" style="height:70%"></i><i style="height:35%"></i><i class="hi" style="height:60%"></i><i style="height:55%"></i><i class="c" style="height:90%"></i><i style="height:40%"></i><i class="hi" style="height:65%"></i></div>
+                  <div class="ui-row" style="margin-top:0.8rem"><span>Food &amp; dining</span><span class="bar t"><span style="width:70%"></span></span><b>-12%</b></div>
+                  <div class="ui-row"><span>Shopping</span><span class="bar"><span style="width:92%"></span></span><b style="color:var(--coral-600)">+28%</b></div>
+                </div>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section section-tight">
+      <!-- 2. Habits -->
+      <section class="section section-tight section-soft" id="habits">
         <div class="container">
           <div class="section-head reveal">
-            <div><span class="eyebrow">Finance</span><h2 style="margin-top:0.9rem;">Money that finally feels understandable.</h2></div>
+            <div><span class="eyebrow is-coral">2 · Habits &amp; Productivity</span><h2>Build streaks. Clear your list. Feel the momentum.</h2></div>
+          </div>
+          <div class="grid grid-3">
+            <article class="card is-coral reveal">
+              <div class="icon-bubble">🔥</div>
+              <h3>Habit tracker</h3>
+              <ul class="check-list"><li>Habit tracker</li><li>Daily streaks</li><li>Habit reminders</li><li>Daily progress tracking</li></ul>
+            </article>
+            <article class="card reveal" style="--delay:80ms">
+              <div class="icon-bubble">✅</div>
+              <h3>Tasks &amp; to-dos</h3>
+              <ul class="check-list"><li>Daily to-do lists</li><li>Task management</li><li>Task priorities</li><li>Due dates</li><li>Task categories</li></ul>
+            </article>
+            <article class="card reveal" style="--delay:160ms">
+              <div class="icon-bubble is-peach">📱</div>
+              <h3>Home screen widgets</h3>
+              <p>Today's habits, tasks and spending allowance right on your home screen — on iOS and Android.</p>
+              <div class="ui-grid-2" style="margin-top:1rem">
+                <div class="widget"><small>Habits</small><strong>4 / 6</strong></div>
+                <div class="widget c"><small>Tasks left</small><strong>2</strong></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Couple -->
+      <section class="section couple-section" id="couple">
+        <div class="container">
+          <div class="section-head reveal">
+            <div><span class="eyebrow">3 · Couple Space ❤️</span><h2>A private space built for the two of you.</h2></div>
+            <p class="lede">Invite your partner with one link and everything below unlocks — shared, synced and visible only to you two.</p>
+          </div>
+          <div class="couple-grid">
+            <div class="couple-card reveal"><span class="ic">📝</span><h3>Shared couple to-do list</h3><p>Chores, errands and plans, assigned to either of you or both.</p></div>
+            <div class="couple-card reveal"><span class="ic">🗓️</span><h3>Couple planner</h3><p>Plan dates, trips and weekends in a shared calendar view.</p></div>
+            <div class="couple-card reveal"><span class="ic">💰</span><h3>Shared budget</h3><p>One budget for the household, with limits you set together.</p></div>
+            <div class="couple-card reveal"><span class="ic">🧾</span><h3>Shared expenses</h3><p>Log who paid, split fairly and always know who owes what.</p></div>
+            <div class="couple-card reveal"><span class="ic">🧭</span><h3>Plan &amp; save together</h3><p>Shared savings goals with progress you can both see.</p></div>
+            <div class="couple-card reveal"><span class="ic">💌</span><h3>Love notes</h3><p>Leave a note; your partner finds it when they open the app.</p></div>
+            <div class="couple-card reveal"><span class="ic">📖</span><h3>Mood journal</h3><p>Daily check-ins so you both know how the other is doing.</p></div>
+            <div class="couple-card reveal"><span class="ic">🎂</span><h3>Special days &amp; anniversaries</h3><p>Never forget a date that matters.</p></div>
+            <div class="couple-card reveal"><span class="ic">⏳</span><h3>Anniversary countdown</h3><p>A live countdown to your next big day.</p></div>
+            <div class="couple-card reveal"><span class="ic">🎁</span><h3>Surprise gift planner</h3><p>Plan and save for surprises, hidden from your partner.</p></div>
+            <div class="couple-card reveal"><span class="ic">🗺️</span><h3>Relationship Map</h3><p>A 12-month journey of challenges and memories.</p></div>
+            <div class="couple-card reveal"><span class="ic">🕰️</span><h3>Memory timeline</h3><p>Photos, milestones and moments in one scrolling story.</p></div>
+            <div class="couple-card reveal"><span class="ic">🌅</span><h3>Daily motivation</h3><p>A little nudge for the two of you every morning.</p></div>
+            <div class="couple-card reveal"><span class="ic">❤️‍🔥</span><h3>Couple streak</h3><p>Show up for each other every day and watch the streak grow.</p></div>
+            <div class="couple-card reveal"><span class="ic">🎲</span><h3>Truth or Dare</h3><p>A playful game for lazy evenings.</p></div>
+            <div class="couple-card reveal"><span class="ic">🪙</span><h3>Decision Toss</h3><p>Pizza or sushi? Let the toss decide.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Relationship Map -->
+      <section class="section" id="map">
+        <div class="container">
+          <div class="section-head is-center reveal">
+            <span class="eyebrow">4 · Relationship Map</span>
+            <h2>A year-long adventure, one chapter a month.</h2>
+            <p class="lede">A 12-month relationship journey with monthly chapters, weekly challenges — 10 every month — and a growing memory collection.</p>
           </div>
           <div class="grid grid-3">
             <article class="card reveal">
-              <div class="icon-bubble">◈</div>
-              <h3>Expense tracking</h3>
-              <p>Capture spending instantly and understand where your money goes with smart categorization.</p>
-              <div class="tag-row"><span class="tag">Auto-categorize</span><span class="tag">Trends</span></div>
+              <div class="icon-bubble">📚</div>
+              <h3>The journey</h3>
+              <ul class="check-list"><li>12-month relationship journey</li><li>Monthly chapters</li><li>Weekly relationship challenges</li><li>10 challenges per month</li></ul>
             </article>
             <article class="card reveal" style="--delay:80ms">
-              <div class="icon-bubble">◌</div>
-              <h3>Budget management</h3>
-              <p>Stay aware of monthly limits and create healthier financial habits with gentle nudges, not guilt.</p>
-              <div class="tag-row"><span class="tag">Monthly limits</span><span class="tag">Alerts</span></div>
+              <div class="icon-bubble is-coral">🎯</div>
+              <h3>The challenges</h3>
+              <ul class="check-list is-coral"><li>Selfie Right Now</li><li>Night Walk</li><li>Sweet Treat</li><li>Movie Night</li><li>…and many more</li></ul>
             </article>
             <article class="card reveal" style="--delay:160ms">
-              <div class="icon-bubble">⬢</div>
-              <h3>Savings milestones</h3>
-              <p>Transform goals into motivating progress with clear visual targets for trips, gifts, and emergencies.</p>
-              <div class="tag-row"><span class="tag">Goal tracking</span><span class="tag">Visual progress</span></div>
+              <div class="icon-bubble is-peach">🏆</div>
+              <h3>The rewards</h3>
+              <ul class="check-list"><li>Memory collection with photos</li><li>Relationship milestones</li><li>Chapter completion badges</li></ul>
             </article>
+          </div>
+          <div class="challenge-row reveal" style="--delay:120ms">
+            <span>📸 Selfie Right Now</span><span>🌙 Night Walk</span><span>🍰 Sweet Treat</span><span>🎬 Movie Night</span><span>🖼️ Memory Collection</span><span>🏆 Milestones</span>
           </div>
         </div>
       </section>
 
-      <section class="section section-tight">
+      <!-- 5. Smart -->
+      <section class="section section-tight section-soft" id="smart">
         <div class="container">
           <div class="section-head reveal">
-            <div><span class="eyebrow">Together</span><h2 style="margin-top:0.9rem;">Built for shared life, not just solo tracking.</h2></div>
+            <div><span class="eyebrow">5 · Smart Features</span><h2>Faster than opening the app.</h2></div>
           </div>
-          <div class="bento">
-            <article class="card span-6 reveal">
-              <div class="icon-bubble">♡</div>
-              <h3>Couple collaboration</h3>
-              <p>Share plans, reminders, and budgets with your partner in one secure space. Every shared item stays private between the two of you.</p>
-              <div class="tag-row"><span class="tag">Shared budgets</span><span class="tag">Joint reminders</span><span class="tag">Private by default</span></div>
-            </article>
-            <article class="card span-6 reveal" style="--delay:80ms">
-              <div class="icon-bubble">✦</div>
-              <h3>Special days</h3>
-              <p>Never miss an anniversary, birthday, or milestone again. Thoughtful reminders arrive early enough to actually plan something.</p>
-              <div class="tag-row"><span class="tag">Smart reminders</span><span class="tag">Gift planning</span></div>
-            </article>
+          <div class="grid grid-4">
+            <article class="card reveal"><div class="icon-bubble">⚡</div><h3>Quick expense entry</h3><p>Add an expense in two taps from anywhere.</p></article>
+            <article class="card reveal" style="--delay:60ms"><div class="icon-bubble is-coral">📲</div><h3>iOS Back Tap</h3><p>Double-tap the back of your iPhone to log an expense instantly.</p></article>
+            <article class="card reveal" style="--delay:120ms"><div class="icon-bubble is-peach">🧩</div><h3>iOS home screen widgets</h3><p>Allowance, habits and tasks at a glance.</p></article>
+            <article class="card reveal" style="--delay:180ms"><div class="icon-bubble">🚀</div><h3>Quick actions</h3><p>Long-press the app icon to jump straight in.</p></article>
+            <article class="card reveal"><div class="icon-bubble is-coral">⏰</div><h3>Expense reminders</h3><p>A gentle nudge to log the day's spending.</p></article>
+            <article class="card reveal" style="--delay:60ms"><div class="icon-bubble">🔔</div><h3>Budget alerts</h3><p>Know when a category is getting close to its limit.</p></article>
+            <article class="card reveal" style="--delay:120ms"><div class="icon-bubble is-peach">📅</div><h3>Daily notifications</h3><p>Habits, tasks and couple moments, right on time.</p></article>
+            <article class="card reveal" style="--delay:180ms"><div class="icon-bubble">📈</div><h3>Spending analytics</h3><p>Trends and patterns surfaced automatically.</p></article>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <!-- 6. Reports -->
+      <section class="section" id="reports">
+        <div class="container">
+          <div class="feature-split">
+            <div class="reveal">
+              <span class="eyebrow">6 · Financial Reports &amp; Insights</span>
+              <h3 style="font-size:clamp(1.8rem,3.4vw,2.6rem);margin:0.9rem 0 1rem">Your whole financial picture, in one screen.</h3>
+              <p class="lede">Clear numbers, honest trends and a progress view that shows how far you've come.</p>
+              <ul class="check-list" style="margin-top:1.4rem">
+                <li>Total income, total expenses &amp; total savings</li>
+                <li>Savings percentage</li>
+                <li>Monthly spending trends</li>
+                <li>Category-wise expense breakdown</li>
+                <li>Income vs spending</li>
+                <li>Budget performance</li>
+                <li>Daily average spending</li>
+                <li>Financial progress over time</li>
+              </ul>
+            </div>
+            <div class="visual reveal" style="--delay:100ms">
+              <div class="ui-grid-2">
+                <div class="ui-card"><div class="k">Total income</div><div class="v up">₹86,000</div></div>
+                <div class="ui-card"><div class="k">Total expenses</div><div class="v down">₹52,310</div></div>
+                <div class="ui-card"><div class="k">Total savings</div><div class="v">₹33,690</div></div>
+                <div class="ui-card"><div class="k">Savings rate</div><div class="v up">39%</div></div>
+              </div>
+              <div class="ui-card">
+                <div class="k">Monthly spending trend</div>
+                <div class="bars" aria-hidden="true"><i style="height:62%"></i><i style="height:48%"></i><i class="c" style="height:88%"></i><i style="height:54%"></i><i class="hi" style="height:70%"></i><i style="height:45%"></i></div>
+                <div class="ui-row" style="margin-top:0.8rem"><span>Daily average</span><b>₹1,744</b></div>
+                <div class="ui-row"><span>Budget performance</span><b class="teal-text">On track</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight">
         <div class="container">
           <div class="cta-banner reveal">
-            <span class="eyebrow">See it for yourself</span>
-            <h2 style="margin-top:0.9rem;">Every detail feels premium, polished, and intentional.</h2>
-            <p>Download Routinee and bring habits, finance, and shared plans into one calm experience.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="contact.html">
-                <span class="play-badge" aria-hidden="true"><span class="play-icon">▶</span></span>
-                <span>Get it on Google Play</span>
+            <div class="cta-logo"><img src="logo.png" alt="" width="72" height="72" /></div>
+            <span class="eyebrow">Free to download</span>
+            <h2>All of this, in your pocket.</h2>
+            <p>Download Routinee on iPhone or Android and set up your first budget in under two minutes.</p>
+            <div class="store-badges">
+              <a class="store-badge is-light" href="https://apps.apple.com/in/app/routinee-budget-habits-love/id6797575745" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z"/></svg>
+                <div><small>Download on the</small><strong>App Store</strong></div>
               </a>
-              <a class="btn btn-secondary" href="help.html">Visit Help Center</a>
+              <a class="store-badge is-light" href="https://play.google.com/store/apps/details?id=com.routinee.app" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D7FE" d="M3.6 2.3 13.3 12 3.6 21.7c-.4-.3-.6-.8-.6-1.4V3.7c0-.6.2-1.1.6-1.4z"/><path fill="#FFCE00" d="m16.6 15.3-3.3-3.3 3.3-3.3 4 2.3c1.1.6 1.1 1.4 0 2z"/><path fill="#FF3A44" d="M16.6 15.3 13.3 12 3.6 21.7c.5.4 1.1.4 1.8 0z"/><path fill="#00F076" d="M16.6 8.7 5.4 2.3c-.7-.4-1.3-.4-1.8 0L13.3 12z"/></svg>
+                <div><small>Get it on</small><strong>Google Play</strong></div>
+              </a>
             </div>
           </div>
         </div>
@@ -144,14 +267,25 @@
       <div class="container">
         <div class="footer-top">
           <div class="footer-brand">
-            <a class="brand" href="index.html"><span class="brand-mark">R</span><span>Routinee</span></a>
-            <p>A premium personal operating system for habits, tasks, budgets, savings, and shared plans.</p>
+            <a class="brand" href="index.html"><span class="brand-mark"><img src="logo.png" alt="Routinee logo" width="40" height="40" /></span><span>Routinee</span></a>
+            <p>Budget, habits and love in one beautiful app. Track your money, build streaks, plan the day and grow closer to your partner.</p>
+            <div class="store-badges">
+              <a class="store-badge" href="https://apps.apple.com/in/app/routinee-budget-habits-love/id6797575745" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z"/></svg>
+                <div><small>Download on the</small><strong>App Store</strong></div>
+              </a>
+              <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.routinee.app" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D7FE" d="M3.6 2.3 13.3 12 3.6 21.7c-.4-.3-.6-.8-.6-1.4V3.7c0-.6.2-1.1.6-1.4z"/><path fill="#FFCE00" d="m16.6 15.3-3.3-3.3 3.3-3.3 4 2.3c1.1.6 1.1 1.4 0 2z"/><path fill="#FF3A44" d="M16.6 15.3 13.3 12 3.6 21.7c.5.4 1.1.4 1.8 0z"/><path fill="#00F076" d="M16.6 8.7 5.4 2.3c-.7-.4-1.3-.4-1.8 0L13.3 12z"/></svg>
+                <div><small>Get it on</small><strong>Google Play</strong></div>
+              </a>
+            </div>
           </div>
           <div class="footer-col">
             <h4>Product</h4>
             <a href="features.html">Features</a>
-            <a href="index.html">Home</a>
-            <a href="contact.html">Get the app</a>
+            <a href="features.html#couple">Couple Space</a>
+            <a href="features.html#map">Relationship Map</a>
+            <a href="index.html#download">Download</a>
           </div>
           <div class="footer-col">
             <h4>Support</h4>
@@ -162,7 +296,7 @@
           <div class="footer-col">
             <h4>Legal</h4>
             <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms & Conditions</a>
+            <a href="terms.html">Terms &amp; Conditions</a>
             <a href="delete-account.html">Delete Account</a>
           </div>
         </div>

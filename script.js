@@ -189,3 +189,20 @@ if (helpSearch) {
     });
   });
 }
+
+/* ---------- Feature tabs (home) ---------- */
+const featureTabs = document.querySelectorAll(".feature-tabs [data-tab]");
+if (featureTabs.length) {
+  const panels = document.querySelectorAll(".feature-panel[data-panel]");
+  featureTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const key = tab.dataset.tab;
+      featureTabs.forEach((t) => {
+        const on = t === tab;
+        t.classList.toggle("is-active", on);
+        t.setAttribute("aria-selected", String(on));
+      });
+      panels.forEach((p) => p.classList.toggle("is-active", p.dataset.panel === key));
+    });
+  });
+}

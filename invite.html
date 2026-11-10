@@ -4,73 +4,144 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <title>Opening Routinee…</title>
+    <title>You're invited to Routinee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body {
-        background: #090415;
-        color: #fff;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      .invite-shell {
         min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1.2rem;
+        display: grid;
+        place-items: center;
+        padding: 2rem 1rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .invite-card {
+        width: min(440px, 100%);
+        position: relative;
+        z-index: 2;
         text-align: center;
-        padding: 2rem;
       }
-      .heart { font-size: 2.5rem; animation: pulse 1.4s ease-in-out infinite; }
-      @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.15)} }
-      h1 { font-size: 1.2rem; font-weight: 700; opacity: 0.9; }
-      p  { font-size: 0.9rem; opacity: 0.45; }
-      .store-btn {
-        display: inline-block; margin-top: 0.5rem;
-        background: rgba(232,74,127,0.85);
-        color: #fff; font-weight: 700; font-size: 0.95rem;
-        border-radius: 2rem; padding: 0.75rem 1.8rem;
-        text-decoration: none;
+      .invite-brand {
+        display: flex; align-items: center; justify-content: center; gap: 0.7rem;
+        margin-bottom: 2rem; font-weight: 800; font-family: "Sora", sans-serif; font-size: 1.05rem;
       }
-      #fallback { display: none; }
+      .invite-icon {
+        width: 4rem; height: 4rem; margin: 0 auto 1.4rem; border-radius: 1.4rem;
+        display: grid; place-items: center; font-size: 1.7rem;
+        background: linear-gradient(135deg, rgba(255, 111, 106, 0.22), rgba(255, 179, 107, 0.3));
+        border: 1px solid var(--border-strong);
+        box-shadow: 0 18px 44px rgba(255, 111, 106, 0.22);
+        animation: invitePulse 2.2s ease-in-out infinite;
+      }
+      @keyframes invitePulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.08); }
+      }
+      .invite-card .eyebrow { margin-bottom: 1rem; }
+      .invite-card h1 { font-size: 1.7rem; margin-bottom: 0.6rem; }
+      .invite-card p.lede { color: var(--muted); font-size: 0.98rem; margin: 0 0 2rem; }
+      .invite-from { color: var(--ink); font-weight: 700; }
+
+      .invite-status {
+        display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+        color: var(--muted-2); font-size: 0.88rem; margin-top: 1.6rem;
+      }
+      .invite-spinner {
+        width: 1rem; height: 1rem; border-radius: 50%;
+        border: 2px solid var(--border-strong); border-top-color: var(--coral);
+        display: inline-block; animation: spin 700ms linear infinite;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+
+      .invite-fallback {
+        margin-top: 1.6rem; padding-top: 1.6rem; border-top: 1px solid var(--border);
+        opacity: 0; transform: translateY(6px); pointer-events: none;
+        transition: opacity 380ms var(--ease-out), transform 380ms var(--ease-out);
+      }
+      .invite-fallback.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+      .invite-fallback p { color: var(--muted-2); font-size: 0.86rem; margin: 0 0 1rem; }
     </style>
   </head>
   <body>
-    <span class="heart">💕</span>
-    <h1>Opening Routinee…</h1>
-    <p>You'll be connected with your partner automatically.</p>
+    <div class="invite-shell">
+      <span class="hero-orb o1"></span>
+      <span class="hero-orb o2"></span>
+      <span class="hero-orb o3"></span>
+      <div class="dot-grid"></div>
 
-    <div id="fallback">
-      <p>App not installed? Get it here:</p>
-      <a class="store-btn" id="store-link" href="#">Download Routinee</a>
+      <div class="invite-card">
+        <a class="invite-brand" href="index.html">
+          <span class="brand-mark"><img src="logo.png" alt="Routinee logo" width="40" height="40" /></span>
+          <span>Routinee</span>
+        </a>
+
+        <div class="legal-card">
+          <span class="eyebrow">Partner invite</span>
+          <div class="invite-icon">💌</div>
+          <h1>You've been invited</h1>
+          <p class="lede" id="inviteLede">
+            <span id="inviteFrom"></span>
+            wants to connect with you on Routinee — plan, budget, and grow together.
+          </p>
+
+          <a class="btn btn-primary btn-block" id="openBtn" href="#">
+            <span>Open Routinee</span>
+          </a>
+
+          <div class="invite-status" id="inviteStatus">
+            <span class="invite-spinner"></span>
+            <span>Opening the app…</span>
+          </div>
+
+          <div class="invite-fallback" id="inviteFallback">
+            <p>Don't have Routinee yet?</p>
+            <a class="btn btn-secondary btn-block" id="storeBtn" href="#">Get the app</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
-      const params   = new URLSearchParams(window.location.search);
-      const from     = params.get('from') || '';
-      const deepLink = 'routinee://invite?from=' + encodeURIComponent(from);
+      const params    = new URLSearchParams(window.location.search);
+      const from      = params.get('from') || '';
+      const deepLink  = 'routinee://invite?from=' + encodeURIComponent(from);
       const isAndroid = /android/i.test(navigator.userAgent);
       const isIOS     = /iphone|ipad|ipod/i.test(navigator.userAgent);
-
+      // Android: pass "from" through as the Play Install Referrer so a fresh
+      // install can still deep-link straight to the pre-filled Add Partner
+      // popup on first open, even though the app wasn't there to catch the
+      // routinee:// deep link just now (see lib/installReferrer.ts).
+      const referrer  = 'from=' + encodeURIComponent(from);
       const storeLink = isAndroid
-        ? 'https://play.google.com/store/apps/details?id=com.routinee.app'
+        ? 'https://play.google.com/store/apps/details?id=com.routinee.app&referrer=' + encodeURIComponent(referrer)
         : 'https://apps.apple.com/app/routinee/id6743427447';
 
-      document.getElementById('store-link').href = storeLink;
+      const fromEl = document.getElementById('inviteFrom');
+      fromEl.textContent = from ? from : 'Someone';
 
-      // Try opening the app immediately
+      document.getElementById('openBtn').href = deepLink;
+      document.getElementById('storeBtn').href = storeLink;
+
+      // Try opening the app immediately.
       window.location.href = deepLink;
 
-      // After 2s, if the page is still visible the app is not installed — go to store
+      // Still here after a beat? Reveal the "get the app" fallback and,
+      // shortly after, send them to the store automatically.
+      setTimeout(() => {
+        if (!document.hidden) {
+          document.getElementById('inviteStatus').style.display = 'none';
+          document.getElementById('inviteFallback').classList.add('is-visible');
+        }
+      }, 900);
+
       setTimeout(() => {
         if (!document.hidden) {
           window.location.href = storeLink;
         }
-      }, 2000);
-
-      // Show fallback UI while waiting (in case user cancels)
-      setTimeout(() => {
-        document.getElementById('fallback').style.display = 'block';
-      }, 800);
+      }, 2400);
     </script>
   </body>
 </html>
